@@ -1,4 +1,5 @@
 import os
+from decouple import config # To import python decouple
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) # Default
@@ -8,7 +9,7 @@ BASE_DIR = os.path.dirname(
             os.path.abspath(__file__))))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '3$8u37lwsasw$!&texx_buaf017ppx1#inzqhu+anlu$netx70'
+SECRET_KEY = config('SECRET_KEY')
 
 
 # Application definition
@@ -75,3 +76,7 @@ VENV_PATH = os.path.dirname(BASE_DIR)
 STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(VENV_PATH, 'media')
+
+
+# .env - file is used for python decouple to keep the passwords safe in encrpyted format
+# In .env while declaring variable there should be no spaces there
