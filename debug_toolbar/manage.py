@@ -3,9 +3,9 @@ import os
 import sys
 
 if __name__ == '__main__':
-    # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'demo.settings') # Default
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'demo.settings.development') # Used in local
-    # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'demo.settings.production') # Used in live
+    # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_project.settings') # Default
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_project.settings.development') # Used in local
+    # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_project.settings.production') # Used in live
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
